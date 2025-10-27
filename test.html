@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+        function sumOfTripledEvens (array){
+    
+            return array.filter(isEven)
+            .map((x )=> 3 * x)
+            .reduce((acc, current) => acc + current);
+
+            
+
+            }
+            function isEven (x){
+                if (x % 2 ==0){
+                    return true
+                    } 
+                return false
+            }
+        // function add7(x){
+        //     return x + 7;
+        // };
+        // function multiply(x , y){
+        //     return x * y;
+        // }
+        // function capitalize(string){
+        //     firstChar = string.charAt(0).toUpperCase();
+        //     return firstChar + string.substring(1).toLowerCase();
+        // }
+
+        // function lastLetter(string) {
+        //     return string.at(-1);
+        // }
+        
+
+    </script>
+</body>
+</html>
