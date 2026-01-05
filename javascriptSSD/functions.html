@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="firstButton" onclick="firstButton()">Start</button>
+    <button id="add" onclick = "secondButton()">Add to cart</button>
+                    
+    <script>
+        function firstButton() {
+            const button = document.querySelector('#firstButton');
+
+            button.textContent = 'Loading...';
+
+            setTimeout(() => {
+                button.textContent = 'Finished';
+            }, 1000);
+        }
+
+        let timeoutId; // store timeout outside the function
+
+function secondButton() {
+    const button = document.querySelector('#add');
+
+    // Remove existing message if it exists
+    let message = document.querySelector('.cart-message');
+    if (!message) {
+        message = document.createElement('div');
+        message.className = 'cart-message';
+        message.textContent = 'Item added to cart';
+        button.insertAdjacentElement('afterend', message);
+    }
+
+    // Cancel previous timeout
+    clearTimeout(timeoutId);
+
+    // Start a new 2-second timeout
+    timeoutId = setTimeout(() => {
+        message.remove();
+    }, 2000);
+}
+
+        let add = function five() {
+            console.log(2+3)
+        };
+        add();
+        add();
+        function runTwice(fun) {
+            if ((typeof fun) == "function"){
+                fun();
+                fun();
+            } else {
+                console.log("the parameter u passed is not a function , sorry")
+            }
+        };
+    </script>
+    
+</body>
+</html>
